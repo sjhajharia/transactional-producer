@@ -1,11 +1,5 @@
 package com.sjhajharia;
 
-//public class TransactionalProducer {
-//    public static void main(String args[]) {
-//        System.out.println("Hello");
-//    }
-//}
-
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -65,13 +59,8 @@ public class TransactionalProducer {
 
 
     public static void main(final String[] args) throws IOException, URISyntaxException {
-
         Scanner in = new Scanner(System.in);
 
-//        if (args.length != 2) {
-//            System.out.println("Please provide command line arguments: configPath transactional_id");
-//            System.exit(1);
-//        }
         Path configFile = new File(TransactionalProducer.class.getClassLoader().getResource("cluster.config").toURI()).toPath();
         System.out.println("PATH: " + configFile);
 
